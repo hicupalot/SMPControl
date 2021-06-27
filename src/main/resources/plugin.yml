@@ -1,0 +1,24 @@
+name: SMPControl
+version: ${project.version}
+main: com.hicupalot.smpcontrol.SMPControl
+api-version: 1.17
+authors: [ hicupalot ]
+description: Controls for your SMP
+
+commands:
+  elytra:
+    description: Turns on and off elytra
+    permission: SMPControl.EventControl
+  end:
+    description: Turns on and off end access via portal creation
+    permission: SMPControl.EventControl
+  reload:
+    description: Reloads the Config, usually automatic but you might like making life hard for yourself
+    permission: SMPControl.reload
+permissions:
+  SMPControl.reload:
+    description: Gives you powers to reload the Config
+    default: op
+  SMPControl.EventControl:
+    description: Gives you DA POWER
+    default: op
