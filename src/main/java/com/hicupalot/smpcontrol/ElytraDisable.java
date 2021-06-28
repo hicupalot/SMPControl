@@ -15,7 +15,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class ElytraDisable implements Listener, CommandExecutor {
     public void Elytra (BlockBreakEvent e) {
-        if (!Config.plugin.getConfig().getBoolean("Elytra")) {
+        if (Config.plugin.getConfig().getBoolean("Elytra")) {
             if (e.getPlayer().getInventory().getChestplate().equals(new ItemStack(Material.ELYTRA))) {
                 e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 10, 255));
                 e.getPlayer().getInventory().getChestplate().setType(Material.AIR);

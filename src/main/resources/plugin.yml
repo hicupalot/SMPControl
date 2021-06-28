@@ -15,6 +15,9 @@ commands:
   reload:
     description: Reloads the Config, usually automatic but you might like making life hard for yourself
     permission: SMPControl.reload
+  nether:
+    description: Turns on and off nether access via portal creation
+    permission: SMPControl.EventControl
 permissions:
   SMPControl.reload:
     description: Gives you powers to reload the Config

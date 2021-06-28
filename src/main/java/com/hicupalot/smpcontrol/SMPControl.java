@@ -7,11 +7,17 @@ public final class SMPControl extends JavaPlugin {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
+        //----------------------------------------------------------------------------//
+        // Commands
         getCommand("reload").setExecutor(new ReloadCommand());
         getCommand("end").setExecutor(new EndControl());
         getCommand("elytra").setExecutor(new ElytraDisable());
+        getCommand("nether").setExecutor(new NetherControl());
+        //----------------------------------------------------------------------------//
+        //Events
         getServer().getPluginManager().registerEvents(new ElytraDisable(), this);
         getServer().getPluginManager().registerEvents(new EndControl(), this);
+        getServer().getPluginManager().registerEvents(new NetherControl(), this);
         // Plugin startup logic
 
     }
