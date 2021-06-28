@@ -2,6 +2,7 @@ package com.hicupalot.smpcontrol;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,6 +11,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.world.PortalCreateEvent;
@@ -17,7 +19,7 @@ import org.bukkit.event.world.PortalCreateEvent;
 public class EndControl implements Listener, CommandExecutor {
     @EventHandler
     public void EndPortal(PlayerInteractEvent e) {
-        if (!Config.plugin.getConfig().getBoolean("End",false)) {
+        if (!Config.plugin.getConfig().getBoolean("End", false)) {
             if (!e.getClickedBlock().getType().equals(Material.AIR)) {
                 if (e.getClickedBlock().getType().equals((Material.END_PORTAL))) {
                     if (e.getMaterial().equals(Material.ENDER_EYE)) {

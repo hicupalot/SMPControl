@@ -13,6 +13,8 @@ public class ReloadCommand implements CommandExecutor {
             if (sender.hasPermission("SMPControl.reload")) {
                 Config.plugin.saveConfig();
                 Config.plugin.reloadConfig();
+                sender.sendMessage(ChatColor.GOLD+"Reloaded the config.yml! You do NOT need to do this if you "+
+                        "changed the options from ingame!");
             }
             else{
                 sender.sendMessage(ChatColor.RED+"You do not have the required permissions!");
