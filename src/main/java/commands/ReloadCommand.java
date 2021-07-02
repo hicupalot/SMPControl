@@ -1,5 +1,6 @@
-package com.hicupalot.smpcontrol;
+package commands;
 
+import com.hicupalot.smpcontrol.Config;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
